@@ -162,7 +162,7 @@ adapter.setItems(items);
 
 The adapter is created in a declarative fashion, using lambda expressions. A list of items will be used by the adapter, containing the restaurant, receipes, comments header and comments. All these model objects will be transformed into cell views (see the picture above).
 
-Define the way the adapter works by using ``whenInstanceof`` (if the model is of this type) and then ``use`` (use this cell view). ``use`` taskes a lambda expression that instantiates the specific cell view. Optionally, you can add extra conditions to the ``whenInstanceof`` rule, by adding and ``and`` rule. With ``and`` you can define virtually any rule by using a lambda expression predicate, based on the index and the model.
+Define the way the adapter works by using ``whenInstanceof`` (if the model is of this type) and then ``use`` (use this cell view). ``use`` taskes a lambda expression that instantiates the specific cell view. Optionally, you can add extra conditions to the ``whenInstanceof`` rule, by adding an ``and`` rule. With ``and`` you can define virtually any rule by using a lambda expression predicate, based on the index and the model.
 
 ``whenInstanceof``, ``and`` and ``use`` must be used only in this order.
 

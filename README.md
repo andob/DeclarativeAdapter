@@ -14,7 +14,9 @@ allprojects {
 ```
 ```
 dependencies {
-    implementation 'com.github.andob:JClusterSpiderifier:1.0.2'
+    implementation('com.github.andob:DeclarativeAdapter:1.0.0') {
+        exclude group: 'com.android.support'
+    }
 }
 ```
 
@@ -156,6 +158,7 @@ adapter.setItems(items);
 ```
 
 <img src="https://raw.githubusercontent.com/andob/DeclarativeAdapter/master/DeclarativeAdapter.png" align="left" width="100%">
+
 
 The adapter is created in a declarative fashion, using lambda expressions. A list of items will be used by the adapter, containing the restaurant, receipes, comments header and comments. All these model objects will be transformed into cell views (see the picture above).
 

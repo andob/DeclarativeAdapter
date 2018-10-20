@@ -1,7 +1,7 @@
 # DeclarativeAdapter
 
-#### If you're using Kotlin, please use [DeclarativeAdapter-kt](https://github.com/andob/DeclarativeAdapter-kt)
-#### Easiest way to declare RecyclerView Adapters in Android! No more boilerplate code :)
+### Easiest way to declare RecyclerView Adapters in Android! No more boilerplate code :)
+### If you're using Kotlin, please use [DeclarativeAdapter-kt](https://github.com/andob/DeclarativeAdapter-kt)
 
 ### Import
 
@@ -53,7 +53,8 @@ public class RestaurantCellView extends CellView<Restaurant>
 
     @BindView(R.id.nameTv)
     TextView nameTv;
-
+```
+```java
     public RestaurantCellView(Context context)
     {
         super(context);
@@ -116,8 +117,6 @@ adapter.setItems(provideRestaurants());
 
 #### 4. In your activity / fragment, create the adapter:
 
-<img src="https://raw.githubusercontent.com/andob/DeclarativeAdapter/master/SimpleDeclarativeAdapter.png" align="left" >
-
 ```java
 DeclarativeAdapter adapter=new DeclarativeAdapter(this);
 
@@ -156,6 +155,8 @@ recyclerView.setAdapter(adapter);
 adapter.setItems(items);
 ```
 
+<img src="https://raw.githubusercontent.com/andob/DeclarativeAdapter/master/DeclarativeAdapter.png" align="left" width="100%">
+
 The adapter is created in a declarative fashion, using lambda expressions. A list of items will be used by the adapter, containing the restaurant, receipes, comments header and comments. All these model objects will be transformed into cell views (see the picture above).
 
 Define the way the adapter works by using ``whenInstanceof`` (if the model is of this type) and then ``use`` (use this cell view). ``use`` taskes a lambda expression that instantiates the specific cell view. Optionally, you can add extra conditions to the ``whenInstanceof`` rule, by adding and ``and`` rule. With ``and`` you can define virtually any rule by using a lambda expression predicate, based on the index and the model.
@@ -176,10 +177,10 @@ All the rules defined must cover all the possible usages (for each element in th
 
 The adapter extends RecyclerView.Adapter and has the following extra utility methods:
 
-``setItems(List items)`` - sets the items and notifies data set changed
-``addItems(List items)`` - adds more items to the adapter's list and notified data set changed
-``insertItem(int index, Object item)`` - inserts an item in the items list and notifies data set changed
-``clearItems()`` - clears the items from the list and notifies data set changed
+1. ``setItems(List items)`` - sets the items and notifies data set changed
+2. ``addItems(List items)`` - adds more items to the adapter's list and notified data set changed
+3. ``insertItem(int index, Object item)`` - inserts an item in the items list and notifies data set changed
+4. ``clearItems()`` - clears the items from the list and notifies data set changed
 
 Furthermore, you have maximum flexibility by directly using adapter's items list:
 

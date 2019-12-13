@@ -1,7 +1,8 @@
+# THIS PROJECT IS NO LONGER MENTAINED. PLEASE USE [DeclarativeAdapter-kt](https://github.com/andob/DeclarativeAdapter-kt)
+
 # DeclarativeAdapter
 
 ### Easiest way to declare RecyclerView Adapters in Android! No more boilerplate code :)
-### If you're using Kotlin, please use [DeclarativeAdapter-kt](https://github.com/andob/DeclarativeAdapter-kt)
 
 [![Android Arsenal]( https://img.shields.io/badge/Android%20Arsenal-DeclarativeAdapter-green.svg?style=flat )]( https://android-arsenal.com/details/1/7252 )
 
